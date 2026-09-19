@@ -1,0 +1,916 @@
+<!<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Conexão Bertani - Assistência Técnica em Celulares, acessórios e eletrônicos.">
+
+  <title>Conexão Bertani | Assistência Técnica</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+  <a class="brand" href="#inicio">
+   <img src="logo.png" alt="Conexão Bertani">
+  </a>
+
+  <nav id="nav">
+    <a href="#inicio">Início</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#assistencia">Assistência</a>
+    <a href="#avaliacoes">Avaliações</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <div class="header-actions">
+
+    <a
+      class="top-wa"
+      href="https://wa.me/551120172618"
+      target="_blank">
+      WhatsApp
+    </a>
+
+    <button class="cart-btn" onclick="abrirCarrinho()">
+      🛒
+      <b id="cartCount">0</b>
+    </button>
+
+    <button class="menu" onclick="toggleMenu()">☰</button>
+
+  </div>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section id="inicio" class="hero">
+
+  <div class="hero-copy">
+
+    <div class="eyebrow">
+      <i></i>
+      ASSISTÊNCIA • ACESSÓRIOS • ELETRÔNICOS
+    </div>
+
+    <h1>
+      Tecnologia<br>
+      <span>conectando você.</span>
+    </h1>
+
+    <p>
+      Seu celular, seus acessórios e seus eletrônicos
+      em um só lugar. Atendimento direto, orçamento
+      pelo WhatsApp e produtos para o seu dia a dia.
+    </p>
+
+    <div class="hero-actions">
+
+      <a class="btn primary" href="#catalogo">
+        Ver catálogo
+      </a>
+
+      <a
+        class="btn ghost"
+        href="https://wa.me/551120172618?text=Olá!%20Vim%20pelo%20site%20da%20Conexão%20Bertani%20e%20quero%20um%20orçamento."
+        target="_blank">
+        💬 Pedir orçamento
+      </a>
+
+    </div>
+
+    <div class="hero-rating">
+      <span>★★★★★</span>
+      <strong>4,7</strong>
+      <small>15 avaliações</small>
+    </div>
+
+  </div>
+
+
+  <div class="hero-visual">
+
+    <div class="glow"></div>
+
+    <img
+      src="logo.png"
+      alt="Logo Conexão Bertani">
+
+    <div class="visual-line"></div>
+
+    <strong>
+      ASSISTÊNCIA TÉCNICA EM CELULARES
+    </strong>
+
+    <small>
+      CAPAS • PELÍCULAS • CABOS • ELETRÔNICOS
+    </small>
+
+  </div>
+
+</section>
+
+
+<!-- SERVIÇOS RÁPIDOS -->
+
+<section class="quick-bar">
+
+  <div>
+    <span>🔧</span>
+    <strong>Assistência</strong>
+    <small>Reparos e manutenção</small>
+  </div>
+
+  <div>
+    <span>🛡️</span>
+    <strong>Proteção</strong>
+    <small>Capas e películas</small>
+  </div>
+
+  <div>
+    <span>⚡</span>
+    <strong>Acessórios</strong>
+    <small>Produtos para celular</small>
+  </div>
+
+  <div>
+    <span>💬</span>
+    <strong>WhatsApp</strong>
+    <small>(11) 2017-2618</small>
+  </div>
+
+</section>
+
+
+<!-- CATÁLOGO -->
+
+<section id="catalogo" class="section catalog">
+
+  <div class="section-heading">
+
+    <div class="eyebrow">
+      <i></i>
+      LOJA ONLINE
+    </div>
+
+    <h2>Catálogo</h2>
+
+    <p>
+      Escolha seus produtos, coloque no carrinho
+      e envie o pedido direto para a loja.
+    </p>
+
+  </div>
+
+
+  <div class="catalog-tools">
+
+    <label class="search">
+
+      🔎
+
+      <input
+        id="search"
+        type="text"
+        placeholder="Buscar produto..."
+        oninput="filtrarProdutos()">
+
+    </label>
+
+
+    <div class="categories">
+
+      <button
+        class="category active"
+        onclick="filtrarCategoria('todos', this)">
+        Todos
+      </button>
+
+      <button
+        class="category"
+        onclick="filtrarCategoria('capas', this)">
+        📱 Capas
+      </button>
+
+      <button
+        class="category"
+        onclick="filtrarCategoria('peliculas', this)">
+        🛡️ Películas
+      </button>
+
+      <button
+        class="category"
+        onclick="filtrarCategoria('cabos', this)">
+        🔌 Cabos
+      </button>
+
+      <button
+        class="category"
+        onclick="filtrarCategoria('carregadores', this)">
+        ⚡ Carregadores
+      </button>
+
+      <button
+        class="category"
+        onclick="filtrarCategoria('fones', this)">
+        🎧 Fones
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <div id="products" class="products">
+
+
+    <!-- PRODUTO 1 -->
+
+    <article
+      class="product"
+      data-category="capas"
+      data-name="Capa Anti Impacto">
+
+      <div class="product-image">
+
+        <span class="product-icon">📱</span>
+
+        <em>OFERTA</em>
+
+      </div>
+
+      <div class="product-body">
+
+        <small>CAPAS</small>
+
+        <h3>Capa Anti Impacto</h3>
+
+        <p>
+          Proteção reforçada para o aparelho.
+        </p>
+
+        <strong class="price">
+          R$ 29,90
+        </strong>
+
+        <button
+          onclick="adicionarCarrinho('Capa Anti Impacto',29.90)">
+          Adicionar ao carrinho
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- PRODUTO 2 -->
+
+    <article
+      class="product"
+      data-category="peliculas"
+      data-name="Película 3D">
+
+      <div class="product-image">
+
+        <span class="product-icon">🛡️</span>
+
+      </div>
+
+      <div class="product-body">
+
+        <small>PELÍCULAS</small>
+
+        <h3>Película 3D</h3>
+
+        <p>
+          Proteção para a tela do aparelho.
+        </p>
+
+        <strong class="price">
+          R$ 19,90
+        </strong>
+
+        <button
+          onclick="adicionarCarrinho('Película 3D',19.90)">
+          Adicionar ao carrinho
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- PRODUTO 3 -->
+
+    <article
+      class="product"
+      data-category="cabos"
+      data-name="Cabo USB Tipo C">
+
+      <div class="product-image">
+
+        <span class="product-icon">🔌</span>
+
+      </div>
+
+      <div class="product-body">
+
+        <small>CABOS</small>
+
+        <h3>Cabo USB Tipo C</h3>
+
+        <p>
+          Para carregamento e transferência.
+        </p>
+
+        <strong class="price">
+          R$ 24,90
+        </strong>
+
+        <button
+          onclick="adicionarCarrinho('Cabo USB Tipo C',24.90)">
+          Adicionar ao carrinho
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- PRODUTO 4 -->
+
+    <article
+      class="product"
+      data-category="carregadores"
+      data-name="Carregador Turbo">
+
+      <div class="product-image">
+
+        <span class="product-icon">⚡</span>
+
+        <em>MAIS VENDIDO</em>
+
+      </div>
+
+      <div class="product-body">
+
+        <small>CARREGADORES</small>
+
+        <h3>Carregador Turbo</h3>
+
+        <p>
+          Carregamento rápido para seu aparelho.
+        </p>
+
+        <strong class="price">
+          R$ 49,90
+        </strong>
+
+        <button
+          onclick="adicionarCarrinho('Carregador Turbo',49.90)">
+          Adicionar ao carrinho
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- PRODUTO 5 -->
+
+    <article
+      class="product"
+      data-category="fones"
+      data-name="Fone Bluetooth">
+
+      <div class="product-image">
+
+        <span class="product-icon">🎧</span>
+
+      </div>
+
+      <div class="product-body">
+
+        <small>FONES</small>
+
+        <h3>Fone Bluetooth</h3>
+
+        <p>
+          Som sem fio para o dia a dia.
+        </p>
+
+        <strong class="price">
+          R$ 69,90
+        </strong>
+
+        <button
+          onclick="adicionarCarrinho('Fone Bluetooth',69.90)">
+          Adicionar ao carrinho
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- PRODUTO 6 -->
+
+    <article
+      class="product"
+      data-category="capas"
+      data-name="Capa Transparente">
+
+      <div class="product-image">
+
+        <span class="product-icon">📱</span>
+
+      </div>
+
+      <div class="product-body">
+
+        <small>CAPAS</small>
+
+        <h3>Capa Transparente</h3>
+
+        <p>
+          Proteção simples e elegante.
+        </p>
+
+        <strong class="price">
+          R$ 19,90
+        </strong>
+
+        <button
+          onclick="adicionarCarrinho('Capa Transparente',19.90)">
+          Adicionar ao carrinho
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- PRODUTO 7 -->
+
+    <article
+      class="product"
+      data-category="carregadores"
+      data-name="Carregador Veicular">
+
+      <div class="product-image">
+
+        <span class="product-icon">🚗</span>
+
+      </div>
+
+      <div class="product-body">
+
+        <small>CARREGADORES</small>
+
+        <h3>Carregador Veicular</h3>
+
+        <p>
+          Carregue seu celular no carro.
+        </p>
+
+        <strong class="price">
+          R$ 39,90
+        </strong>
+
+        <button
+          onclick="adicionarCarrinho('Carregador Veicular',39.90)">
+          Adicionar ao carrinho
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- PRODUTO 8 -->
+
+    <article
+      class="product"
+      data-category="cabos"
+      data-name="Cabo Lightning">
+
+      <div class="product-image">
+
+        <span class="product-icon">🔌</span>
+
+      </div>
+
+      <div class="product-body">
+
+        <small>CABOS</small>
+
+        <h3>Cabo Lightning</h3>
+
+        <p>
+          Cabo para aparelhos compatíveis.
+        </p>
+
+        <strong class="price">
+          R$ 29,90
+        </strong>
+
+        <button
+          onclick="adicionarCarrinho('Cabo Lightning',29.90)">
+          Adicionar ao carrinho
+        </button>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ASSISTÊNCIA -->
+
+<section id="assistencia" class="section assistance">
+
+  <div class="section-heading">
+
+    <div class="eyebrow">
+      <i></i>
+      RESOLVA SEU PROBLEMA
+    </div>
+
+    <h2>Assistência técnica</h2>
+
+    <p>
+      Seu aparelho deu problema?
+      Manda uma mensagem e consulte o orçamento.
+    </p>
+
+  </div>
+
+
+  <div class="service-grid">
+
+    <article>
+      <span>📱</span>
+      <h3>Conserto de celular</h3>
+      <p>Reparos e manutenção de aparelhos.</p>
+    </article>
+
+    <article>
+      <span>🔋</span>
+      <h3>Troca de bateria</h3>
+      <p>Avaliação e troca de bateria.</p>
+    </article>
+
+    <article>
+      <span>🖥️</span>
+      <h3>Tela e display</h3>
+      <p>Atendimento para telas danificadas.</p>
+    </article>
+
+    <article>
+      <span>🔌</span>
+      <h3>Conectores</h3>
+      <p>Problemas de carregamento e conexão.</p>
+    </article>
+
+  </div>
+
+
+  <a
+    class="btn primary center-btn"
+    href="https://wa.me/551120172618?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20assistência%20técnica."
+    target="_blank">
+
+    💬 Falar com a assistência
+
+  </a>
+
+</section>
+
+
+<!-- BANNER -->
+
+<section class="banner">
+
+  <div>
+
+    <div class="eyebrow">
+      <i></i>
+      CONEXÃO BERTANI
+    </div>
+
+    <h2>
+      Precisou?
+      <span>Chama a gente.</span>
+    </h2>
+
+    <p>
+      Atendimento direto pelo WhatsApp.
+    </p>
+
+  </div>
+
+  <a
+    class="btn white"
+    href="https://wa.me/551120172618"
+    target="_blank">
+
+    WhatsApp
+
+  </a>
+
+</section>
+
+
+<!-- AVALIAÇÕES -->
+
+<section id="avaliacoes" class="section reviews-section">
+
+  <div class="section-heading">
+
+    <div class="eyebrow">
+      <i></i>
+      EXPERIÊNCIA DOS CLIENTES
+    </div>
+
+    <h2>
+      O que falam da loja
+    </h2>
+
+  </div>
+
+
+  <div class="reviews">
+
+    <article>
+
+      <div>★★★★★</div>
+
+      <p>
+        “Atendimento muito bom e pessoal super atencioso.”
+      </p>
+
+      <strong>
+        Cliente Conexão Bertani
+      </strong>
+
+    </article>
+
+
+    <article>
+
+      <div>★★★★★</div>
+
+      <p>
+        “Resolveram meu aparelho e o atendimento foi tranquilo.”
+      </p>
+
+      <strong>
+        Cliente Conexão Bertani
+      </strong>
+
+    </article>
+
+
+    <article>
+
+      <div>★★★★★</div>
+
+      <p>
+        “Tem bastante opção de acessórios e o atendimento é rápido.”
+      </p>
+
+      <strong>
+        Cliente Conexão Bertani
+      </strong>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- CONTATO -->
+
+<section id="contato" class="contact">
+
+  <div class="contact-inner">
+
+    <div>
+
+      <div class="eyebrow blue">
+        <i></i>
+        VISITE A LOJA
+      </div>
+
+      <h2>
+        Conexão Bertani
+      </h2>
+
+      <p>
+        Assistência Técnica & Eletrônicos
+      </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+
+        <span>📍</span>
+
+        <strong>Endereço</strong>
+
+        <p>
+          Tv. Jacques Brel, 422<br>
+          Fazenda da Juta<br>
+          São Paulo - SP<br>
+          03977-710
+        </p>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <span>💬</span>
+
+        <strong>WhatsApp</strong>
+
+        <p>
+          (11) 2017-2618
+        </p>
+
+        <a
+          href="https://wa.me/551120172618"
+          target="_blank">
+
+          Chamar agora →
+
+        </a>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <span>🕒</span>
+
+        <strong>Atendimento</strong>
+
+        <p>
+          Consulte os horários<br>
+          diretamente com a loja.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <a
+      class="map-btn"
+      href="https://www.google.com/maps/search/?api=1&query=Tv.%20Jacques%20Brel%2C%20422%2C%20Fazenda%20da%20Juta%2C%20S%C3%A3o%20Paulo%20-%20SP"
+      target="_blank">
+
+      📍 Abrir localização no mapa
+
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- RODAPÉ -->
+
+<footer>
+
+  <img
+    src="logo-conexao.png"
+    alt="Conexão Bertani">
+
+  <p>
+    Assistência Técnica & Eletrônicos
+  </p>
+
+  <small>
+    © 2026 Conexão Bertani
+  </small>
+
+</footer>
+
+
+<!-- BOTÃO WHATSAPP -->
+
+<a
+  class="floating-wa"
+  href="https://wa.me/551120172618?text=Olá!%20Vim%20pelo%20site%20da%20Conexão%20Bertani."
+  target="_blank">
+
+  💬
+
+</a>
+
+
+<!-- CARRINHO -->
+
+<div
+  id="cartOverlay"
+  class="cart-overlay"
+  onclick="fecharCarrinho(event)">
+
+  <aside
+    class="cart"
+    onclick="event.stopPropagation()">
+
+    <div class="cart-head">
+
+      <h2>
+        🛒 Seu carrinho
+      </h2>
+
+      <button onclick="fecharCarrinho()">
+        ✕
+      </button>
+
+    </div>
+
+
+    <div
+      id="cartItems"
+      class="cart-items">
+
+      <div class="empty-cart">
+
+        <span>🛒</span>
+
+        <h3>
+          Carrinho vazio
+        </h3>
+
+        <p>
+          Adicione produtos para montar seu pedido.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="cart-foot">
+
+      <div class="cart-total">
+
+        <span>Total</span>
+
+        <strong id="cartTotal">
+          R$ 0,00
+        </strong>
+
+      </div>
+
+
+      <button
+        class="checkout"
+        onclick="finalizarPedido()">
+
+        💬 Enviar pedido pelo WhatsApp
+
+      </button>
+
+
+      <button
+        class="clear-cart"
+        onclick="limparCarrinho()">
+
+        Limpar carrinho
+
+      </button>
+
+    </div>
+
+  </aside>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
